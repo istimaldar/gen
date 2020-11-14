@@ -21,7 +21,7 @@ endif
 
 
 install: check_prereq ## go install binary info $GOPATH/bin
-	packr2 install github.com/smallnest/gen
+	packr2 install github.com/istimaldar/gen
 
 vet: ## run go vet on the project
 	go vet .
