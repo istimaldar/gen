@@ -1,4 +1,4 @@
-module github.com/smallnest/gen
+module github.com/istimaldar/gen
 
 go 1.14
 
