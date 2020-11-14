@@ -780,10 +780,10 @@ func GenerateModelInfo(tables map[string]*ModelInfo, dbMeta DbTableMeta,
 	var code []string
 	for _, f := range fields {
 
-		if f.PrimaryKeyFieldParser == "unsupported" {
-			return nil, fmt.Errorf("unable to generate code for table: %s, primary key column: [%d] %s has unsupported type: %s / %s",
-				dbMeta.TableName(), f.ColumnMeta.Index(), f.ColumnMeta.Name(), f.ColumnMeta.DatabaseTypeName(), f.GoFieldType)
-		}
+		//if f.PrimaryKeyFieldParser == "unsupported" {
+		//	return nil, fmt.Errorf("unable to generate code for table: %s, primary key column: [%d] %s has unsupported type: %s / %s",
+		//		dbMeta.TableName(), f.ColumnMeta.Index(), f.ColumnMeta.Name(), f.ColumnMeta.DatabaseTypeName(), f.GoFieldType)
+		//}
 		code = append(code, f.Code)
 	}
 
