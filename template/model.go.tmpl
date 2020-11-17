@@ -16,26 +16,6 @@ var (
     _ = uuid.UUID{}
 )
 
-/*
-DB Table Details
--------------------------------------
-{{ $ddl := .TableInfo.DBMeta.DDL }}
-{{if $ddl }}
-{{$ddl}}
-{{- end}}
-
-JSON Sample
--------------------------------------
-{{ToJSON .TableInfo.Instance 4}}
-
-{{if .TableInfo.Notes }}
-Comments
--------------------------------------
-{{ .TableInfo.Notes}}
-{{end}}
-
-*/
-
  {{if not .Config.AddProtobufAnnotation }}
 
 // {{.StructName}} struct is a row record of the {{.TableName}} table in the {{.DatabaseName}} database
